@@ -16,7 +16,9 @@ import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
 /*
-This activity is launched after a particular cell is clicked. It plays a video with the YouTube API, then there is a button to send the user back to the main Activity. 
+This activity is launched after a particular cell is clicked. It plays a video with the YouTube API, then there is a button to send the user back to the main Activity.
+The activity itself implements OnInitalizedListener, and is then passed as a parameter to youTubeView. The Class grabs the ID of the video from the String Extras
+in the intent and passes this ID to the youTubeView in the method onInitializationSuccess();
  */
 public class YouTubeActivity extends YouTubeBaseActivity implements
         YouTubePlayer.OnInitializedListener{

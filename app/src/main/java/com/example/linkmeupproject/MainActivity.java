@@ -72,6 +72,12 @@ public class MainActivity extends ActionBarActivity{
         tabs.setViewPager(pager);
 
     }
+
+    /**
+     * This method is called when the query button is clicked. It will grab the ListView and assign an adapter to it.
+     * This method calls the setListData method which populates the data tables;
+     * @param v
+     */
     public void getUserYoutubeFeed(View v){
         CustomListView = this;
         setListData();
@@ -80,6 +86,10 @@ public class MainActivity extends ActionBarActivity{
         adapter = new CustomAdapter(CustomListView, CustomListViewValuesArr, res);
         list.setAdapter(adapter);
     }
+
+    /**
+     * This is a method that populates the data table. This is where my progress was incomplete
+     */
     public void setListData(){
         String[] titles = {"Uncensored - Key & Peele - Negrotown","Key & Peele - Basketball Commentary","Uncensored - Key & Peele - Loco Gangsters", "Key & Peele - Al Qaeda Meeting"};
         String[] ids = {"Rg58d8opQKA","3d053pPV_AA","XDzpzYzp9HE","IHfiMoJUDVQ"};
@@ -133,6 +143,11 @@ public class MainActivity extends ActionBarActivity{
 
         }*/
     }
+
+    /**
+     * This method reacts to the onClick status of each cell and launches the YouTubeActivity in response
+     * @param mPosition: index of the cell clicked
+     */
     public void onItemClick(int mPosition){
         Intent intent = new Intent(this, YouTubeActivity.class);
         intent.putExtra(index,CustomListViewValuesArr.get(mPosition).getVideoID());
