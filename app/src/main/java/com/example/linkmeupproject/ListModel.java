@@ -2,6 +2,7 @@ package com.example.linkmeupproject;
 
 /**
  * Created by Sean on 6/18/2015.
+ * Java Class to store the information in each cell of the list
  */
 public class ListModel {
 

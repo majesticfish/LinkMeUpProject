@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 /**
  * Created by Sean on 6/18/2015.
+ * Adapter for the ListView with a custom layout.
  */
 public class CustomAdapter  extends BaseAdapter implements View.OnClickListener {
     private Activity activity;

@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 /**
  * Created by Sean on 6/17/15
+ * Adapter that manages the two Tabs
  */
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 

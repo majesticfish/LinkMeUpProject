@@ -15,7 +15,9 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
-
+/*
+This activity is launched after a particular cell is clicked. It plays a video with the YouTube API, then there is a button to send the user back to the main Activity. 
+ */
 public class YouTubeActivity extends YouTubeBaseActivity implements
         YouTubePlayer.OnInitializedListener{
     private static final int RECOVERY_DIALOG_REQUEST = 1;
