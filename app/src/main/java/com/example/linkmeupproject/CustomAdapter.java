@@ -31,6 +31,11 @@ public class CustomAdapter  extends BaseAdapter implements View.OnClickListener 
         res = resLocal;
         inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
+
+    /**
+     * returns number of elements that the adapter can Manage
+     * @return
+     */
     @Override
     public int getCount() {
         if(data.size() <= 0) return 0;
@@ -46,6 +51,10 @@ public class CustomAdapter  extends BaseAdapter implements View.OnClickListener 
     public long getItemId(int position) {
         return position;
     }
+
+    /**
+     * Internal class which serves as a collection of Views in each cell of the ListView
+     */
     public static class ViewHolder{
         public TextView text;
         public TextView text1;
@@ -82,6 +91,10 @@ public class CustomAdapter  extends BaseAdapter implements View.OnClickListener 
     public void onClick(View v) {
         Log.v("CustomAdapter", "=====Row button clicked=====");
     }
+
+    /**
+     * Private OnClickListener that redirects to the onItemClick method in the MainActivity
+     */
     private class OnItemClickListener implements View.OnClickListener{
         private int mPosition;
         public OnItemClickListener(int position){

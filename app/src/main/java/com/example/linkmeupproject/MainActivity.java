@@ -44,6 +44,11 @@ public class MainActivity extends ActionBarActivity{
     CustomAdapter adapter;
     public  MainActivity CustomListView = null;
     public ArrayList<ListModel> CustomListViewValuesArr = new ArrayList<ListModel>();
+
+    /**
+     * On Create method that sets up the toolbar and the pager adapter to create tabs.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -153,6 +158,7 @@ public class MainActivity extends ActionBarActivity{
         intent.putExtra(index,CustomListViewValuesArr.get(mPosition).getVideoID());
         startActivity(intent);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -166,14 +172,10 @@ public class MainActivity extends ActionBarActivity{
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
-
-
 }
