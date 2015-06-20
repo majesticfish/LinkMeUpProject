@@ -1,0 +1,1 @@
+include ':app', ':google-api-client-1.4.1-beta', ':google-api-services-youtube-v3-rev68-1.16.0-rc', ':YouTubeAndroidPlayerApi'
